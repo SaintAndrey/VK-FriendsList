@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		555A08931EE697900084FFCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08921EE697900084FFCA /* main.m */; };
 		555A08961EE697900084FFCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08951EE697900084FFCA /* AppDelegate.m */; };
-		555A08991EE697900084FFCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08981EE697900084FFCA /* ViewController.m */; };
+		555A08991EE697900084FFCA /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08981EE697900084FFCA /* StartViewController.m */; };
 		555A089C1EE697900084FFCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555A089A1EE697900084FFCA /* Main.storyboard */; };
 		555A089E1EE697900084FFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555A089D1EE697900084FFCA /* Assets.xcassets */; };
 		555A08A11EE697900084FFCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555A089F1EE697900084FFCA /* LaunchScreen.storyboard */; };
 		555A08AC1EE697900084FFCA /* VK_FriendsListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08AB1EE697900084FFCA /* VK_FriendsListTests.m */; };
 		555A08B71EE697900084FFCA /* VK_FriendsListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08B61EE697900084FFCA /* VK_FriendsListUITests.m */; };
+		55A0972A1EF4704700EFA3C6 /* TableFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */; };
+		55A0972C1EF4723C00EFA3C6 /* .gitignor in Resources */ = {isa = PBXBuildFile; fileRef = 55A0972B1EF4723C00EFA3C6 /* .gitignor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,8 @@
 		555A08921EE697900084FFCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		555A08941EE697900084FFCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		555A08951EE697900084FFCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		555A08971EE697900084FFCA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		555A08981EE697900084FFCA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		555A08971EE697900084FFCA /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		555A08981EE697900084FFCA /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		555A089B1EE697900084FFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		555A089D1EE697900084FFCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555A08A01EE697900084FFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,9 @@
 		555A08B21EE697900084FFCA /* VK FriendsListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VK FriendsListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		555A08B61EE697900084FFCA /* VK_FriendsListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VK_FriendsListUITests.m; sourceTree = "<group>"; };
 		555A08B81EE697900084FFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55A097281EF4704700EFA3C6 /* TableFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFriendsViewController.h; sourceTree = "<group>"; };
+		55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFriendsViewController.m; sourceTree = "<group>"; };
+		55A0972B1EF4723C00EFA3C6 /* .gitignor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignor; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		555A08851EE6978F0084FFCA = {
 			isa = PBXGroup;
 			children = (
+				55A0972B1EF4723C00EFA3C6 /* .gitignor */,
 				555A08901EE697900084FFCA /* VK FriendsList */,
 				555A08AA1EE697900084FFCA /* VK FriendsListTests */,
 				555A08B51EE697900084FFCA /* VK FriendsListUITests */,
@@ -103,13 +109,15 @@
 			children = (
 				555A08941EE697900084FFCA /* AppDelegate.h */,
 				555A08951EE697900084FFCA /* AppDelegate.m */,
-				555A08971EE697900084FFCA /* ViewController.h */,
-				555A08981EE697900084FFCA /* ViewController.m */,
+				555A08971EE697900084FFCA /* StartViewController.h */,
+				555A08981EE697900084FFCA /* StartViewController.m */,
 				555A089A1EE697900084FFCA /* Main.storyboard */,
 				555A089D1EE697900084FFCA /* Assets.xcassets */,
 				555A089F1EE697900084FFCA /* LaunchScreen.storyboard */,
 				555A08A21EE697900084FFCA /* Info.plist */,
 				555A08911EE697900084FFCA /* Supporting Files */,
+				55A097281EF4704700EFA3C6 /* TableFriendsViewController.h */,
+				55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */,
 			);
 			path = "VK FriendsList";
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				555A08A11EE697900084FFCA /* LaunchScreen.storyboard in Resources */,
+				55A0972C1EF4723C00EFA3C6 /* .gitignor in Resources */,
 				555A089E1EE697900084FFCA /* Assets.xcassets in Resources */,
 				555A089C1EE697900084FFCA /* Main.storyboard in Resources */,
 			);
@@ -273,7 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555A08991EE697900084FFCA /* ViewController.m in Sources */,
+				555A08991EE697900084FFCA /* StartViewController.m in Sources */,
+				55A0972A1EF4704700EFA3C6 /* TableFriendsViewController.m in Sources */,
 				555A08961EE697900084FFCA /* AppDelegate.m in Sources */,
 				555A08931EE697900084FFCA /* main.m in Sources */,
 			);
@@ -507,6 +517,7 @@
 				555A08BD1EE697900084FFCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		555A08BE1EE697900084FFCA /* Build configuration list for PBXNativeTarget "VK FriendsListTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +526,7 @@
 				555A08C01EE697900084FFCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		555A08C11EE697900084FFCA /* Build configuration list for PBXNativeTarget "VK FriendsListUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +535,7 @@
 				555A08C31EE697900084FFCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
