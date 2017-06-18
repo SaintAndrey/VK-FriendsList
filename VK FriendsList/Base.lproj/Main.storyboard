@@ -26,14 +26,14 @@
                                 <rect key="frame" x="137" y="296" width="46" height="30"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
-                                    <action selector="requestVK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FA3-zt-cCX"/>
+                                    <action selector="receiveToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnU-oK-miq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uk3-Pm-7jM">
                                 <rect key="frame" x="93" y="214" width="134" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
                                 <connections>
                                     <action selector="tapOnEdit:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="uCm-KI-wHj"/>
                                     <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="R0T-vJ-LD3"/>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="93" y="258" width="134" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="tapOnEdit:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="EzS-QX-xGF"/>
                                     <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="tDv-Up-vP1"/>
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwJ-Ah-pr6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083.75" y="96.126760563380287"/>
+            <point key="canvasLocation" x="984" y="97"/>
         </scene>
     </scenes>
 </document>

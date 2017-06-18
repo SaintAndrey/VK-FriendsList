@@ -111,13 +111,13 @@
 				555A08951EE697900084FFCA /* AppDelegate.m */,
 				555A08971EE697900084FFCA /* StartViewController.h */,
 				555A08981EE697900084FFCA /* StartViewController.m */,
+				55A097281EF4704700EFA3C6 /* TableFriendsViewController.h */,
+				55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */,
 				555A089A1EE697900084FFCA /* Main.storyboard */,
 				555A089D1EE697900084FFCA /* Assets.xcassets */,
 				555A089F1EE697900084FFCA /* LaunchScreen.storyboard */,
 				555A08A21EE697900084FFCA /* Info.plist */,
 				555A08911EE697900084FFCA /* Supporting Files */,
-				55A097281EF4704700EFA3C6 /* TableFriendsViewController.h */,
-				55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */,
 			);
 			path = "VK FriendsList";
 			sourceTree = "<group>";

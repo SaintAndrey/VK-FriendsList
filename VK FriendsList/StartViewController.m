@@ -9,7 +9,9 @@
 #import "StartViewController.h"
 
 @interface StartViewController()
-
+{
+    NSUserDefaults *userDefaults;
+}
 
 @end
 
@@ -17,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    userDefaults = [NSUserDefaults standardUserDefaults];
 }
 
 
@@ -35,31 +37,31 @@
     [sender resignFirstResponder];
 }
 
-- (IBAction)requestVK:(id)sender {
+- (IBAction)receiveToken:(id)sender {
     [_vkLogin resignFirstResponder];
     [_vkPassword resignFirstResponder];
-    
     BOOL right = YES;
     
     if ([[_vkLogin text] isEqualToString:@""]) {
         [_alertLogin setHidden:NO];
-        NSLog(@"Введите логин");
         right = NO;
     }
     
     if ([[_vkPassword text] isEqualToString:@""]) {
         [_alertPassword setHidden:NO];
-        NSLog(@"Введите пароль");
         right = NO;
     }
     
     if (right) {
-        NSString *vk = [NSString stringWithFormat:@"https://oauth.vk.com/token?grant_type=password&client_id=3140623&client_secret=VeWdmVclDCtn6ihuP1nt&username=%@&password=%@", [_vkLogin text], [_vkPassword text]];
-        NSLog(@"%@", vk);
+        NSString *vkAccess = [NSString stringWithFormat:@"https://oauth.vk.com/token?grant_type=password&client_id=3140623&client_secret=VeWdmVclDCtn6ihuP1nt&username=%@&password=%@", [_vkLogin text], [_vkPassword text]];
+        NSURL *vkURL = [NSURL URLWithString:vkAccess];
+        NSURLSession *vkSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        [[vkSession dataTaskWithURL:vkURL
+                  completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                      NSString *accessToken = [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] objectForKey:@"access_token"];
+                      [userDefaults setObject:accessToken forKey:@"token"];
+         }] resume];
     }
-//    NSURL *urlVK = [NSURL URLWithString:vk];
-//    NSURLRequest *requestVK = [NSURLRequest requestWithURL:urlVK];
-//    NSString *request = [requestVK ]
 }
 
 - (IBAction)tapOnEdit:(id)sender {

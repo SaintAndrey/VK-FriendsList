@@ -17,7 +17,7 @@
 
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)textFieldDoneEditing:(id)sender;
-- (IBAction)requestVK:(id)sender;
+- (IBAction)receiveToken:(id)sender;
 - (IBAction)tapOnEdit:(id)sender;
 
 @end
