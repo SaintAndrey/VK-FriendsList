@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:nil forKey:@"token"];
 }
 
 
@@ -58,9 +59,12 @@
         NSURLSession *vkSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
         [[vkSession dataTaskWithURL:vkURL
                   completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                      
                       NSString *accessToken = [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] objectForKey:@"access_token"];
                       [userDefaults setObject:accessToken forKey:@"token"];
-         }] resume];
+                      
+                      [self performSegueWithIdentifier:@"StartToTableFriends" sender:self];
+                  }] resume];
     }
 }
 

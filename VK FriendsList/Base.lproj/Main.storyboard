@@ -22,15 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-vX-dV3">
-                                <rect key="frame" x="137" y="296" width="46" height="30"/>
-                                <state key="normal" title="Войти"/>
-                                <connections>
-                                    <action selector="receiveToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnU-oK-miq"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uk3-Pm-7jM">
-                                <rect key="frame" x="93" y="214" width="134" height="30"/>
+                                <rect key="frame" x="93" y="185" width="134" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
@@ -40,7 +33,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAE-6W-vuD">
-                                <rect key="frame" x="93" y="258" width="134" height="30"/>
+                                <rect key="frame" x="93" y="231" width="134" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
@@ -50,34 +43,42 @@
                                 </connections>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SO7-bo-kan">
-                                <rect key="frame" x="80" y="263" width="5" height="21"/>
+                                <rect key="frame" x="80" y="236" width="5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6or-of-DTQ">
-                                <rect key="frame" x="80" y="219" width="5" height="21"/>
+                                <rect key="frame" x="80" y="188" width="5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-vX-dV3">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="uM9-CJ-cYL"/>
+                                </constraints>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <action selector="receiveToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnU-oK-miq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="zpm-vX-dV3" secondAttribute="trailing" constant="121" id="0YR-we-CSm"/>
-                            <constraint firstItem="SO7-bo-kan" firstAttribute="leading" secondItem="6or-of-DTQ" secondAttribute="leading" id="3Uh-Gd-6UA"/>
-                            <constraint firstItem="uk3-Pm-7jM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="6KT-5f-2kX"/>
-                            <constraint firstItem="6or-of-DTQ" firstAttribute="centerY" secondItem="uk3-Pm-7jM" secondAttribute="centerY" id="CsJ-v2-yGc"/>
-                            <constraint firstItem="zpm-vX-dV3" firstAttribute="top" secondItem="YAE-6W-vuD" secondAttribute="bottom" constant="8" id="UEh-Nw-tub"/>
-                            <constraint firstItem="YAE-6W-vuD" firstAttribute="top" secondItem="uk3-Pm-7jM" secondAttribute="bottom" constant="14" id="ZUs-g8-XlY"/>
-                            <constraint firstItem="uk3-Pm-7jM" firstAttribute="leading" secondItem="6or-of-DTQ" secondAttribute="trailing" constant="8" symbolic="YES" id="ZgW-oz-ho6"/>
-                            <constraint firstItem="SO7-bo-kan" firstAttribute="centerY" secondItem="YAE-6W-vuD" secondAttribute="centerY" id="Zzo-cb-KIl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uk3-Pm-7jM" secondAttribute="trailing" constant="77" id="cTK-NZ-bZa"/>
-                            <constraint firstItem="YAE-6W-vuD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="jXq-6Y-7MT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpm-vX-dV3" secondAttribute="bottom" constant="242" id="jlO-Ko-02V"/>
-                            <constraint firstItem="zpm-vX-dV3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="lAf-yF-lF6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YAE-6W-vuD" secondAttribute="trailing" constant="77" id="lqt-sd-0No"/>
-                            <constraint firstItem="uk3-Pm-7jM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="194" id="sYT-7F-jwz"/>
+                            <constraint firstItem="6or-of-DTQ" firstAttribute="baseline" secondItem="uk3-Pm-7jM" secondAttribute="baseline" id="2LU-Gu-oK5"/>
+                            <constraint firstItem="zpm-vX-dV3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5HC-UA-czS"/>
+                            <constraint firstItem="zpm-vX-dV3" firstAttribute="centerX" secondItem="uk3-Pm-7jM" secondAttribute="centerX" id="8b4-A2-qAv"/>
+                            <constraint firstItem="zpm-vX-dV3" firstAttribute="top" secondItem="YAE-6W-vuD" secondAttribute="bottom" constant="8" symbolic="YES" id="G8w-Dw-MGq"/>
+                            <constraint firstItem="YAE-6W-vuD" firstAttribute="top" secondItem="uk3-Pm-7jM" secondAttribute="bottom" constant="16" id="Hf9-RG-xnq"/>
+                            <constraint firstItem="SO7-bo-kan" firstAttribute="centerY" secondItem="YAE-6W-vuD" secondAttribute="centerY" id="I6d-aa-BsR"/>
+                            <constraint firstItem="YAE-6W-vuD" firstAttribute="leading" secondItem="uk3-Pm-7jM" secondAttribute="leading" id="RMn-Ar-LEI"/>
+                            <constraint firstItem="zpm-vX-dV3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wky-5a-EHH"/>
+                            <constraint firstItem="YAE-6W-vuD" firstAttribute="leading" secondItem="SO7-bo-kan" secondAttribute="trailing" constant="8" symbolic="YES" id="lqE-TQ-uXb"/>
+                            <constraint firstItem="SO7-bo-kan" firstAttribute="leading" secondItem="6or-of-DTQ" secondAttribute="leading" id="n2T-Z5-QuP"/>
+                            <constraint firstItem="YAE-6W-vuD" firstAttribute="trailing" secondItem="uk3-Pm-7jM" secondAttribute="trailing" id="t4P-Jv-2kn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YAE-6W-vuD" secondAttribute="trailing" constant="77" id="yUC-da-Mgq"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="Tgj-fA-Wn6"/>
@@ -88,6 +89,7 @@
                         <outlet property="alertPassword" destination="SO7-bo-kan" id="fZd-yH-MKY"/>
                         <outlet property="vkLogin" destination="uk3-Pm-7jM" id="Ilh-Fc-ggg"/>
                         <outlet property="vkPassword" destination="YAE-6W-vuD" id="twT-lR-Sse"/>
+                        <segue destination="Lfn-8h-mpL" kind="show" identifier="StartToTableFriends" id="oiT-D6-E6C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,13 +109,20 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m1U-dw-Jox">
-                                <rect key="frame" x="16" y="28" width="288" height="532"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="16" y="18" width="288" height="532"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lfn-8h-mpL" id="Yjl-pq-nyp"/>
+                                    <outlet property="delegate" destination="Lfn-8h-mpL" id="ArI-ts-UEH"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableFriends" destination="m1U-dw-Jox" id="hng-gT-yy5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwJ-Ah-pr6" sceneMemberID="firstResponder"/>
             </objects>
