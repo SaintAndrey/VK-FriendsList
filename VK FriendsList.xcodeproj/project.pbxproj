@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5535C5671F07BEC900C22FB1 /* VKApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5535C5661F07BEC900C22FB1 /* VKApi.m */; };
 		555A08931EE697900084FFCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08921EE697900084FFCA /* main.m */; };
 		555A08961EE697900084FFCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08951EE697900084FFCA /* AppDelegate.m */; };
 		555A089C1EE697900084FFCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555A089A1EE697900084FFCA /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5535C5651F07BEC900C22FB1 /* VKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKApi.h; sourceTree = "<group>"; };
+		5535C5661F07BEC900C22FB1 /* VKApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKApi.m; sourceTree = "<group>"; };
 		555A088E1EE697900084FFCA /* VK FriendsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK FriendsList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		555A08921EE697900084FFCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		555A08941EE697900084FFCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				555A089F1EE697900084FFCA /* LaunchScreen.storyboard */,
 				555A08A21EE697900084FFCA /* Info.plist */,
 				555A08911EE697900084FFCA /* Supporting Files */,
+				5535C5651F07BEC900C22FB1 /* VKApi.h */,
+				5535C5661F07BEC900C22FB1 /* VKApi.m */,
 			);
 			path = "VK FriendsList";
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				55F505201F06B61400264812 /* AuthenticationViewController.m in Sources */,
 				55A0972A1EF4704700EFA3C6 /* TableFriendsViewController.m in Sources */,
 				55F505231F06B64C00264812 /* StartViewController.m in Sources */,
+				5535C5671F07BEC900C22FB1 /* VKApi.m in Sources */,
 				555A08961EE697900084FFCA /* AppDelegate.m in Sources */,
 				555A08931EE697900084FFCA /* main.m in Sources */,
 			);

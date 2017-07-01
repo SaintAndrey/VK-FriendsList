@@ -7,14 +7,12 @@
 //
 
 #import "TableFriendsViewController.h"
+#import "VKApi.h"
 
 @interface TableFriendsViewController ()
 {
-    NSMutableArray *friends;
-    
+    NSArray *friends;
 }
-
-@property NSUserDefaults *userDefaults;
 
 @end
 
@@ -22,51 +20,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    friends = [NSMutableArray new];
-    _userDefaults = [NSUserDefaults standardUserDefaults];
-
-    NSLog(@"Success");
+    VKApi *user = [[VKApi alloc] init];
+    [user getVKFriends];
     
-    [self requestFriends];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(friendsReceived:)
+                                                 name:VKApiGetRequestForFriendsNotification
+                                               object:nil];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)requestFriends {
-    NSString *vkFriends = [NSString stringWithFormat:@"https://api.vk.com/method/friends.get?user_id=&v=5.52&access_token=%@&fields=name&order=name", [_userDefaults objectForKey:@"token"]];
-    NSLog(@"%@", vkFriends);
-//    NSLog(@"%@", [_userDefaults objectForKey:@"token"]);
-    NSURL *vkFriendsURL = [NSURL URLWithString:vkFriends];
-    NSURLSession *vkFriendsSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    [[vkFriendsSession dataTaskWithURL:vkFriendsURL
-                     completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//                         NSLog(@"%@", [NSString stringWithUTF8String:data]);
-                         [self parserFriends:data];
-                     }
-      ] resume];
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)parserFriends:(NSData * _Nullable)data {
-    NSDictionary *responseFriends = [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] objectForKey:@"response"];
-    NSArray *itemFriends = [responseFriends objectForKey:@"items"];
-    
-    [itemFriends enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop){
-        NSString *friend = [NSString stringWithFormat:@"%@ %@", [obj objectForKey:@"first_name"], [obj objectForKey:@"last_name"]];
-        [friends addObject:friend];
-    }];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableFriends reloadData];
-    });
-    [_userDefaults setObject:nil forKey:@"token"];
+-(void)friendsReceived:(NSNotification *)notification {
+    NSDictionary *dicFriends = notification.userInfo;
+    friends = dicFriends[VKApiFriendsUserInfoKey];
+    [_tableFriends reloadData];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
+#pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [friends count];
@@ -85,6 +64,12 @@
     
     return cell;
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+#pragma mark - UITableViewDelegate
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath;
