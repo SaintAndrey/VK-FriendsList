@@ -24,9 +24,12 @@
     [super viewDidLoad];
     friends = [NSMutableArray new];
     _userDefaults = [NSUserDefaults standardUserDefaults];
+
+    NSLog(@"Success");
     
     [self requestFriends];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -35,13 +38,16 @@
 
 - (void)requestFriends {
     NSString *vkFriends = [NSString stringWithFormat:@"https://api.vk.com/method/friends.get?user_id=&v=5.52&access_token=%@&fields=name&order=name", [_userDefaults objectForKey:@"token"]];
+    NSLog(@"%@", vkFriends);
+//    NSLog(@"%@", [_userDefaults objectForKey:@"token"]);
     NSURL *vkFriendsURL = [NSURL URLWithString:vkFriends];
     NSURLSession *vkFriendsSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[vkFriendsSession dataTaskWithURL:vkFriendsURL
                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                         
+//                         NSLog(@"%@", [NSString stringWithUTF8String:data]);
                          [self parserFriends:data];
-                     }] resume];
+                     }
+      ] resume];
 }
 
 - (void)parserFriends:(NSData * _Nullable)data {
@@ -83,45 +89,5 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath;
 }
-
-/*
-#pragma mark - Navigation
-
- - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
- return 1;
- }
- 
- - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
- return 8;
- }
- 
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- static NSString *MyIndentifier = @"IDDQD";
- 
- UITableViewCell *cell = [_m_pItemsTable dequeueReusableCellWithIdentifier:MyIndentifier];
- 
- if (cell == nil) {
- cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIndentifier];
- }
- 
- NSArray *temp = [[NSArray alloc] initWithObjects:@"Меркурий", @"Верера", @"Земля", @"Марс", @"Юпитер", @"Сатурн", @"Уран", @"Нептун", nil];
- 
- cell.textLabel.text = [temp objectAtIndex:indexPath.row];
- 
- return cell;
- }
- 
- - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- return indexPath;
- }
-
- 
- 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

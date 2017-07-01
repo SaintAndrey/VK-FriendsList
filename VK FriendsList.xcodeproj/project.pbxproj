@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		555A08931EE697900084FFCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08921EE697900084FFCA /* main.m */; };
 		555A08961EE697900084FFCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08951EE697900084FFCA /* AppDelegate.m */; };
-		555A08991EE697900084FFCA /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08981EE697900084FFCA /* StartViewController.m */; };
 		555A089C1EE697900084FFCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555A089A1EE697900084FFCA /* Main.storyboard */; };
 		555A089E1EE697900084FFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555A089D1EE697900084FFCA /* Assets.xcassets */; };
 		555A08A11EE697900084FFCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555A089F1EE697900084FFCA /* LaunchScreen.storyboard */; };
 		555A08AC1EE697900084FFCA /* VK_FriendsListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08AB1EE697900084FFCA /* VK_FriendsListTests.m */; };
 		555A08B71EE697900084FFCA /* VK_FriendsListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555A08B61EE697900084FFCA /* VK_FriendsListUITests.m */; };
 		55A0972A1EF4704700EFA3C6 /* TableFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */; };
+		55F505201F06B61400264812 /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F5051F1F06B61400264812 /* AuthenticationViewController.m */; };
+		55F505231F06B64C00264812 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F505221F06B64C00264812 /* StartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		555A08921EE697900084FFCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		555A08941EE697900084FFCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		555A08951EE697900084FFCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		555A08971EE697900084FFCA /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		555A08981EE697900084FFCA /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		555A089B1EE697900084FFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		555A089D1EE697900084FFCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555A08A01EE697900084FFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,10 @@
 		555A08B81EE697900084FFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55A097281EF4704700EFA3C6 /* TableFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFriendsViewController.h; sourceTree = "<group>"; };
 		55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFriendsViewController.m; sourceTree = "<group>"; };
+		55F5051E1F06B61400264812 /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
+		55F5051F1F06B61400264812 /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
+		55F505211F06B64C00264812 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		55F505221F06B64C00264812 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +109,10 @@
 			children = (
 				555A08941EE697900084FFCA /* AppDelegate.h */,
 				555A08951EE697900084FFCA /* AppDelegate.m */,
-				555A08971EE697900084FFCA /* StartViewController.h */,
-				555A08981EE697900084FFCA /* StartViewController.m */,
+				55F505211F06B64C00264812 /* StartViewController.h */,
+				55F505221F06B64C00264812 /* StartViewController.m */,
+				55F5051E1F06B61400264812 /* AuthenticationViewController.h */,
+				55F5051F1F06B61400264812 /* AuthenticationViewController.m */,
 				55A097281EF4704700EFA3C6 /* TableFriendsViewController.h */,
 				55A097291EF4704700EFA3C6 /* TableFriendsViewController.m */,
 				555A089A1EE697900084FFCA /* Main.storyboard */,
@@ -278,8 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555A08991EE697900084FFCA /* StartViewController.m in Sources */,
+				55F505201F06B61400264812 /* AuthenticationViewController.m in Sources */,
 				55A0972A1EF4704700EFA3C6 /* TableFriendsViewController.m in Sources */,
+				55F505231F06B64C00264812 /* StartViewController.m in Sources */,
 				555A08961EE697900084FFCA /* AppDelegate.m in Sources */,
 				555A08931EE697900084FFCA /* main.m in Sources */,
 			);
@@ -361,6 +367,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -409,6 +416,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -430,10 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "VK FriendsList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.VK-FriendsList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -441,10 +451,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "VK FriendsList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.VK-FriendsList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

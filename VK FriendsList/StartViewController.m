@@ -1,17 +1,14 @@
 //
-//  ViewController.m
+//  StartViewController.m
 //  VK FriendsList
 //
-//  Created by Andrey on 06/06/2017.
+//  Created by Andrey on 30/06/2017.
 //  Copyright © 2017 Andrey. All rights reserved.
 //
 
 #import "StartViewController.h"
 
-@interface StartViewController()
-{
-    NSUserDefaults *userDefaults;
-}
+@interface StartViewController ()
 
 @end
 
@@ -19,58 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:nil forKey:@"token"];
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backgroundTap:(id)sender {
-    [_vkLogin resignFirstResponder];
-    [_vkPassword resignFirstResponder];
-}
+/*
+#pragma mark - Navigation
 
-- (IBAction)textFieldDoneEditing:(id)sender {
-    [sender resignFirstResponder];
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
-- (IBAction)receiveToken:(id)sender {
-    [_vkLogin resignFirstResponder];
-    [_vkPassword resignFirstResponder];
-    BOOL right = YES;
-    
-    if ([[_vkLogin text] isEqualToString:@""]) {
-        [_alertLogin setHidden:NO];
-        right = NO;
-    }
-    
-    if ([[_vkPassword text] isEqualToString:@""]) {
-        [_alertPassword setHidden:NO];
-        right = NO;
-    }
-    
-    if (right) {
-        NSString *vkAccess = [NSString stringWithFormat:@"https://oauth.vk.com/token?grant_type=password&client_id=3140623&client_secret=VeWdmVclDCtn6ihuP1nt&username=%@&password=%@", [_vkLogin text], [_vkPassword text]];
-        NSURL *vkURL = [NSURL URLWithString:vkAccess];
-        NSURLSession *vkSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-        [[vkSession dataTaskWithURL:vkURL
-                  completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                      
-                      NSString *accessToken = [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] objectForKey:@"access_token"];
-                      [userDefaults setObject:accessToken forKey:@"token"];
-                      
-                      [self performSegueWithIdentifier:@"StartToTableFriends" sender:self];
-                  }] resume];
-    }
-}
-
-- (IBAction)tapOnEdit:(id)sender {
-    [_alertLogin setHidden:YES];
-    [_alertPassword setHidden:YES];
-}
+*/
 
 @end

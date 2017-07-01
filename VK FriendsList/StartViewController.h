@@ -1,8 +1,8 @@
 //
-//  ViewController.h
+//  StartViewController.h
 //  VK FriendsList
 //
-//  Created by Andrey on 06/06/2017.
+//  Created by Andrey on 30/06/2017.
 //  Copyright © 2017 Andrey. All rights reserved.
 //
 
@@ -10,15 +10,4 @@
 
 @interface StartViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *vkLogin;
-@property (weak, nonatomic) IBOutlet UITextField *vkPassword;
-@property (weak, nonatomic) IBOutlet UILabel *alertLogin;
-@property (weak, nonatomic) IBOutlet UILabel *alertPassword;
-
-- (IBAction)backgroundTap:(id)sender;
-- (IBAction)textFieldDoneEditing:(id)sender;
-- (IBAction)receiveToken:(id)sender;
-- (IBAction)tapOnEdit:(id)sender;
-
 @end
-
